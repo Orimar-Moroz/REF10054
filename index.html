@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governatori Arte</title>
+    <meta name="description" content="Galeria Governatori Arte — exposição de arte contemporânea e telas únicas.">
+    <meta name="keywords" content="arte, galeria, pinturas, Clara Vitorino, exposição, arte contemporânea">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1C2526] font-sans">
+
+<!-- Cabeçalho -->
+<header class="bg-amber-700 text-white py-4 sticky top-0 z-10">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="#inicio">
+            <img src="Logo.png" alt="Governatori Arte Logo" class="h-12">
+        </a>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#inicio" class="hover:underline">Início</a></li>
+                <li><a href="#telas" class="hover:underline">Telas</a></li>
+                <li><a href="#vídeo" class="hover:underline">Vídeo</a></li> 
+                <li><a href="PDF/Jesus-Ramos.pdf" target="_blank">Biografia</a></li>
+                <li><a href="#contato" class="hover:underline">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container mx-auto px-4 py-8">
+
+    <!-- Seção Início -->
+    <section id="inicio" class="mb-12">
+        <h2 class="text-4xl font-bold text-center text-gray-100 mb-4">Bem-vindo à Governatori Arte</h2>
+        <p class="text-lg text-gray-300 text-center max-w-2xl mx-auto">
+            A Governatori Arte é uma galeria dedicada a celebrar a criatividade e a expressão artística. Explore nossa coleção de telas exclusivas e conecte-se com a beleza da arte contemporânea.
+        </p>
+    </section>
+
+   <!-- Seção Telas -->
+    <section id="telas" class="mb-12 pt-16">
+        <h2 class="text-3xl font-bold text-gray-100 mb-6 text-center">Tela REF-10045</h2>
+        <div class="flex justify-center" id="gallery">
+            <div class="cursor-pointer max-w-sm" onclick="openModal(0)">
+                <img src="REF-10054.png" alt="Paisagem Minas", Olho sobre tela por Luiz Roberto Jesus Ramos" class="mx-auto w-300 h-64 object-cover" loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-100">Luiz Roberto Jesus Ramos</h3>
+                    <p class="text-gray-300">Paisagem "Minas"</p>
+                    <p class="text-gray-300">Oleo Sobre tela, 2025</p>
+                    <p class="text-gray-300">Medidas: 100 x 73 cm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vídeo" class="mb-12 pt-16">
+            <h2 class="text-3xl font-bold text-gray-100 mb-6 text-center">Vídeo</h2>
+            <div class="flex justify-center">
+                <video controls class="max-w-full h-auto">
+                    <source src="Execução.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </section>                             
+                                       
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2 class="text-3xl font-bold text-gray-100 mb-6 text-center">Contato</h2>
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="text-lg text-gray-200 mb-4">
+                Entre em contato para adquirir nossas obras de domingo a sexta-feira.<br>
+                Das 9h às 17h<br>
+                Telefone: +55 41 99204-9544<br>
+                <a href="https://wa.me/5541992049544?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Governatori%20Arte!"
+                   target="_blank"
+                   class="inline-flex items-center mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.134.297-.347.446-.52.149-.174.297-.347.445-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.501-.173-.001-.371-.05-.571-.05-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"/>
+                    </svg>
+                    Fale conosco pelo WhatsApp
+                </a>
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50 overflow-auto">
+    <div class="bg-white p-6 rounded-lg">
+        <img id="modal-image" src="" alt="Natureza Viva, acrílico sobre tela por Clara Vitorino" class="mb-4">
+        <h3 id="modal-title" class="text-xl font-bold text-pink-600"></h3>
+        <p id="modal-artist" class="text-gray-700"></p>
+        <p id="modal-details" class="text-gray-700"></p>
+        <p id="modal-description" class="text-gray-700 mt-2"></p>
+        <button onclick="closeModal()" aria-label="Fechar modal" class="mt-4 p-2 bg-red-700 text-white rounded hover:bg-red-800">Fechar</button>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+        <p>© 2025 Governatori Arte. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    function openModal(index) {
+        document.getElementById('modal').classList.remove('hidden');
+        document.getElementById('modal-image').src = "REF-10054.PNG"; // Use the actual image path
+        document.getElementById('modal-title').textContent = "Paisagem Minas";
+        document.getElementById('modal-artist').textContent = "Luiz Roberto Jesus Ramos";
+        document.getElementById('modal-details').textContent = "Olho sobre tela, 2025 — Medidas: 100 x 73 cm";
+        document.getElementById('modal-description').textContent = "Uma obra que retrata a vitalidade da natureza com cores vibrantes e pinceladas expressivas.";
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
